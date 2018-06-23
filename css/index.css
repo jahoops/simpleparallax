@@ -23,6 +23,17 @@ body {
   width: 960px;
 }
 
+.in_slide_div {
+  height: 50px;
+  width: 350px;
+  background: pink;
+}
+.in_slide_div_content {
+  height: 50px;
+  width: 350px;
+  background: yellow;
+}
+
 #slide1,
 #slide3,
 #slide5 {
