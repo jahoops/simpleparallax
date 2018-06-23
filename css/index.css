@@ -34,6 +34,28 @@ body {
   background: yellow;
 }
 
+
+
+.content.forclock {
+  margin: auto;
+  width: 90%;
+}
+
+.content.forclock .in_slide_div_content {
+  height: 40rem;
+  width: 40rem;
+  float: left;
+  position:relative;
+  border-radius: 50%;
+  background: url(../img/camel.PNG);
+  background-size: 135%;
+  background-repeat: no-repeat;
+  background-position-y: -5px;
+  background-position-x: -94px;
+}
+
+
+
 #slide1,
 #slide3,
 #slide5 {

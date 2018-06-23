@@ -10,6 +10,7 @@
   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
   <link href='css/nav.css' rel='stylesheet' type='text/css'>
+  <link href='css/clock.css' rel='stylesheet' type='text/css'>
   <link href='css/index.css' rel='stylesheet' type='text/css'>
 </head>
 
@@ -58,8 +59,16 @@
   </div>
   <div id="slide3">
     <div class="in_slide_div">in slide 3</div>
-    <div class="content">
-      <div class="in_slide_div_content">in slide 3 content div</div>
+    <div class="content forclock">
+      <div class="in_slide_div_content">
+          <div class="clock">
+            <div class="clock-face">
+              <div class="hand hour-hand"></div>
+              <div class="hand min-hand"></div>
+              <div class="hand second-hand"></div>
+            </div>
+          </div>
+      </div>
     </div>
   </div>
   <div id="slide4">
@@ -76,6 +85,7 @@
   </div>
   <!-- SLIDES END -->
   <script src="js/index.js"></script>
+  <script src="js/clock.js"></script>
 </body>
 
 </html>
