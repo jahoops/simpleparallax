@@ -1,7 +1,4 @@
 .clock {
-    background: #018DED url(camel.png);
-    background-size: cover;
-    background-position: center;
     width: 20rem;
     height: 20rem;
     border: 20px solid black;

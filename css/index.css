@@ -23,65 +23,105 @@ body {
   width: 960px;
 }
 
-.in_slide_div {
-  height: 50px;
-  width: 350px;
-  background: pink;
-}
-.in_slide_div_content {
-  height: 50px;
-  width: 350px;
-  background: yellow;
+#water {
+  background: url(../img/water.png) 50% 0 no-repeat fixed / cover;
 }
 
-
-
-.content.forclock {
-  margin: auto;
-  width: 90%;
+#grass {
+  background: url(../img/grass.png) 50% 0 no-repeat fixed / cover;
 }
 
-.content.forclock .in_slide_div_content {
+#tree {
+  background: url(../img/tree.png) 50% 0 no-repeat fixed / cover;
+}
+
+.shadow-it {
+  vertical-align: middle;
+  box-shadow: 1px 0px 2px 3px #fff;
+}
+
+.big-picture {
+  width: 100%;
+  color: #fff;
+  height: 100vh;
+  margin: 0;
+}
+
+#floating-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: brown;
+  text-align: center;
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  top: 90vh;
+}
+
+#floating-menu .floating-menu-item {
+  margin: 0 10px;
+  border-radius: 10%;
+  height: 30px;
+  width: 20%;
+  background-color: black;
+  color: white;
+}
+
+#floating-menu .popup-content {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  top: -300px;
+  background-color: yellow;
+  color: blue;
+}
+
+#floating-menu .clockprojecticon:before {
+  content: 'clock icon';
+}
+
+#floating-menu .blurprojecticon:before {
+  content: 'blur icon';
+}
+
+#floating-menu .blurprojecticon:hover #blur {
+  display: flex;
+}
+
+#floating-menu .anotherprojecticon:before {
+  content: 'another icon';
+}
+
+#floating-menu .anotherprojecticon:hover #another {
+  display: flex;
+}
+
+#clock {
   height: 40rem;
   width: 40rem;
-  float: left;
-  position:relative;
+  position: absolute;
   border-radius: 50%;
   background: url(../img/camel.PNG);
   background-size: 135%;
   background-repeat: no-repeat;
   background-position-y: -5px;
   background-position-x: -94px;
+  z-index: 1;
 }
 
-
-
-#slide1,
-#slide3,
-#slide5 {
-  width: 100%;
+.sample1 {
+  height: 50px;
+  width: 350px;
+  background: pink;
 }
 
-#slide1 {
-  background: url(../img/slide3.png) 50% 0 no-repeat fixed;
-  color: #fff;
-  height: 100vh;
-  margin: 0;
-  background-size: cover;
-}
-
-#slide3 {
-  background: url(../img/slide2.png) 50% 0 no-repeat fixed;
-  color: #fff;
-  height: 100vh;
-  margin: 0;
-  background-size: cover;
-}
-
-#slide5 {
-  background: url(../img/slide1.png) 50% 0 no-repeat fixed;
-  color: #fff;
-  height: 100vh;
-  margin: 0;
-  background-size: cover;
+.sample2 {
+  height: 50px;
+  width: 350px;
+  background: yellow;
 }

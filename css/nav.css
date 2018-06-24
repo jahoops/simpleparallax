@@ -4,6 +4,7 @@
     height: 80px;
     position: fixed;
     margin-top: 30px;
+    z-index: 99;
   }
   
   #nav {
