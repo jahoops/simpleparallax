@@ -25,6 +25,8 @@ $( document ).ready(function() {
   $('.clockprojecticon').on('mouseleave', function(){
     $('#clock').css('top','250vh');
   });
+  
+  renderLogo();
 
 });
 

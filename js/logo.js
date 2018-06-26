@@ -6,7 +6,6 @@ function nextCol() {
 
 function resetEls(els) {
     els.forEach(function (el, index) {
-
         el.style.opacity = '0';
         el.style.fill = 'transparent';
         el.style.stroke = 'transparent';
@@ -84,7 +83,7 @@ colorSetBases = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#00FFFF', '#FF00FF
 colorSetBases.forEach(function (baseColor, baseIndex) {
     var tempArray = [];
     for (var i = 0; i < colors.length; i++) {
-        tempArray[i] = color = lighten(baseColor, (i * .04));
+        tempArray[i] = color = lighten(baseColor, (i * 0.04));
     }
     colorsArray.push(tempArray);
     var t = (baseIndex === colorSetBases.length - 1) ? 0 : baseIndex + 1;
@@ -94,13 +93,14 @@ colorSetBases.forEach(function (baseColor, baseIndex) {
 
 
 var cloneit = document.querySelector('#svglogo').cloneNode(true);
-cloneit.setAttribute('id', 'svglogo2');
-document.getElementsByTagName("section")[0].appendChild(cloneit);
-cloneit = document.querySelector('#svglogo').cloneNode(true);
-cloneit.setAttribute('id', 'svglogo3');
-document.getElementsByTagName("section")[0].appendChild(cloneit);
+// cloneit.setAttribute('id', 'svglogo2');
+// document.getElementsByTagName("section")[0].appendChild(cloneit);
+// cloneit = document.querySelector('#svglogo').cloneNode(true);
+// cloneit.setAttribute('id', 'svglogo3');
+// document.getElementsByTagName("section")[0].appendChild(cloneit);
+colors = colorsArray[8];
 
-function render() {
+function renderLogo() {
     els = document.querySelectorAll('#svglogo path');
     resetEls(els);
 
@@ -109,7 +109,7 @@ function render() {
             el.style.fill = 'transparent';
             el.style.stroke = colors[index];
             setTimeout(function () {
-                el.style.fill = lighten(colors[index], -.45);
+                el.style.fill = lighten(colors[index], -0.25);
             }, index * 50);
         }, index * 150);
     });
@@ -117,3 +117,4 @@ function render() {
     els.forEach(function (el, index) {
         el.style.opacity = 1.0;
     });
+}
