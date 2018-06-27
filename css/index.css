@@ -47,6 +47,25 @@ body {
   margin: 0;
 }
 
+.box:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -2px;
+  right: -2px;
+  border: 1px solid white;
+  position: absolute;
+}
+.box:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 2px;
+  right: 2px;
+  border: 1px solid yellow;
+  position: absolute;
+}
+
 #floating-menu {
   display: flex;
   justify-content: center;
@@ -60,12 +79,15 @@ body {
 }
 
 #floating-menu .floating-menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 10px;
   border-radius: 10%;
   height: 30px;
   width: 20%;
-  background-color: black;
   color: white;
+  position: relative;
 }
 
 #floating-menu .popup-content {
@@ -81,20 +103,8 @@ body {
   color: blue;
 }
 
-#floating-menu .clockprojecticon:before {
-  content: 'clock icon';
-}
-
-#floating-menu .blurprojecticon:before {
-  content: 'blur icon';
-}
-
 #floating-menu .blurprojecticon:hover #blur {
   display: flex;
-}
-
-#floating-menu .anotherprojecticon:before {
-  content: 'another icon';
 }
 
 #floating-menu .anotherprojecticon:hover #another {
