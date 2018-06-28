@@ -13,13 +13,6 @@
     margin-top: 20px;
   }
   
-  #logo {
-    text-decoration: none;
-    float: left;
-    width: 35%;
-    height: 10vh;
-  }
-  
   #nav ul {
     list-style: none;
     display: block;
