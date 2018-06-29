@@ -15,20 +15,7 @@ function scrollSlide(el, targetid) {
 
 $(document).ready(function () {
 
-  $('#pagepiling').pagepiling({
-    menu: '#menu',
-    anchors: ['water', 'grass', 'clock', 'tree'],
-    sectionsColor: ['#bfda00', '#2ebe21', '#2C3E50', '#51bec4'],
-    direction: 'horizontal',
-    navigation: {
-       'position': 'right',
-       'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
-    },
-    afterRender: function(){
-       //playing the video
-       console.log('callback after render');
-    }
- });
+  var rellax = new Rellax('.rellax');
 
   $('.clockprojecticon').on('mouseenter', function () {
     if ($('#clock').css('top') !== '3vh') {
@@ -45,17 +32,31 @@ $(document).ready(function () {
 
   'use strict';
 
-  function run() {
+  var rotateSteps = [];
 
-    requestAnimationFrame(run);
-    r = ((screen.offsetWidth / 2) - pointer.ex) / 2;
-    pointer.ease(15);
+  function doSteps() {
+    // stop animation when array is empty
+    if(rotateSteps.length<1) return;
+    // remove the first element of the rotateSteps array
+    var step = rotateSteps.shift();
+    // get rotation
+    var r = step.rotate;
+    // get milliseconds to pause after this step
+    var w = step.thenWait;
+    // rotate entire container
     live.style[transform] = 'rotateY(' + r + 'deg)';
-
+    // negate container rotation so letters face forward
     for (var i = 0; i < numLetters; i++) {
       letters[i].style[transform] = 'rotateY(' + (-r) + 'deg)';
+      // adjust letter color based on position and rotation
       var c = (70 - (i - 1.5) * Math.sin(r * Math.PI / 180) * 40);
       letters[i].style.color = 'hsl(0, 0%, ' + c + '%)';
+    }
+    // if delay, wait and then request next frame (call this function again)
+    if(w>0){
+      setTimeout(function(){
+        requestAnimationFrame(doSteps);
+      },w);
     }
   }
 
@@ -72,33 +73,13 @@ $(document).ready(function () {
     return null;
   }
 
-  var screen = document.getElementById('screen');
-  var pointer = (function (screen) {
-    var pointer = {
-      x: screen.offsetWidth / 2,
-      ex: screen.offsetWidth / 2 - 180,
-      pointer: function (e) {
-        var touchMode = e.targetTouches,
-          pointer;
-        if (touchMode) {
-          e.preventDefault();
-          pointer = touchMode[0];
-        } else pointer = e;
-        this.x = pointer.clientX;
-      },
-      ease: function (steps) {
-        this.ex += (this.x - this.ex) / steps;
-      }
-    };
-    window.addEventListener('mousemove', function (e) {
-      this.pointer(e);
-    }.bind(pointer), false);
-    window.addEventListener('touchmove', function (e) {
-      this.pointer(e);
-    }.bind(pointer), false);
-    return pointer;
-  }(screen));
+  var wait = 100;
 
-  run();
+  for(var r = 180; r>=0; r=r-10) {
+    rotateSteps.push({rotate: r, thenWait: wait});
+    wait += 15;
+  }
+
+  doSteps();
 
 }();
