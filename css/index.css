@@ -24,11 +24,6 @@ html {
   background: url(../img/tree.png) 50% 0 no-repeat fixed / cover;
 }
 
-.shadow-it {
-  vertical-align: middle;
-  box-shadow: 1px 0px 2px 3px #fff;
-}
-
 .big-picture {
   width: 100%;
   color: #fff;
@@ -45,6 +40,7 @@ html {
   border: 1px solid white;
   position: absolute;
 }
+
 .box:after {
   content: "";
   width: 100%;
@@ -55,16 +51,12 @@ html {
   position: absolute;
 }
 
-#floating-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#water-bottom {
   background: palevioletred;
-  text-align: center;
   height: 40px;
   width: 100%;
-  position: absolute;
-  bottom: 5px;
+  position: fixed;
+  bottom: 0px;
   z-index: 999;
 }
 
@@ -127,59 +119,23 @@ html {
 }
 
 html {
-	touch-action: none;
-	content-zooming: none;
-	margin:0;
-	padding:0;
+  touch-action: none;
+  content-zooming: none;
+  margin: 0;
+  padding: 0;
 }
+
 #logo {
+  color: transparent;
+  font-family: 'Slackey';
+  font-size: 2em;
   position: absolute;
   right: 2%;
   top: 2%;
-  z-index:999999;
-  transition: all 2.0s;
-  transition-delay: 0.2s;
+  z-index: 999;
 }
-#screen {
-	position:absolute;
-	width: 100%;
-	height: 100%;
-	-webkit-perspective:500px;
-	perspective:500px;
-	-webkit-perspective-origin:50% 50%;
-	perspective-origin:50% 50%;
-	cursor: default;
+#logo span.white {
+  opacity: 0;
+  color: white;
 }
 
-#live {
-	position:absolute;
-	width:640px;
-	height:50px;
-	left:50%;
-	top:50%;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-}
-#live span {
-	position: absolute;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	font-family: 'Slackey', cursive;
-	font-size: 50px;
-	top: -60px;
-}
-#k {left:0%}
-#a {left:6.25%}
-#l {left:12.5%}
-#l2 {left:18.75%}
-#i {left:25%}
-#h {left:31.25%}
-#o {left:37.5%}
-#o2 {left:43.75%}
-#p {left:50%}
-#e {left:56.25%}
-#r {left:62.5%}
-#dot {left:68.75%}
-#c {left:75%}
-#o3 {left:81.25%}
-#m {left:87.5%}

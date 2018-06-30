@@ -462,7 +462,7 @@
         delimiter: "word",
         tag: "span",
         search: false,
-        customClass: "",
+        customClass: "white",
         generateIndexID: false,
         generateValueClass: false,
         stripHTMLTags: false,
