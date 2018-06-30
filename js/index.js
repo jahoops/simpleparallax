@@ -15,7 +15,20 @@ function scrollSlide(el, targetid) {
 
 $(document).ready(function () {
 
-  var rellax = new Rellax('.rellax');
+  $('#pagepiling').pagepiling({
+    menu: '#menu',
+    anchors: ['water', 'grass', 'clock', 'tree'],
+    sectionsColor: ['#bfda00', '#2ebe21', '#2C3E50', '#51bec4'],
+    direction: 'horizontal',
+    navigation: {
+       'position': 'right',
+       'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
+    },
+    afterRender: function(){
+       //playing the video
+       console.log('callback after render');
+    }
+ });
 
   $('.clockprojecticon').on('mouseenter', function () {
     if ($('#clock').css('top') !== '3vh') {

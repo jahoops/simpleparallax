@@ -10,9 +10,33 @@
   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
-  <link href='css/nav.css' rel='stylesheet' type='text/css'>
+  <link href='css/jquery.pagepiling.css' rel='stylesheet' type='text/css'>
+  <link href='css/examples.css' rel='stylesheet' type='text/css'>
+  <!-- <link href='css/nav.css' rel='stylesheet' type='text/css'> -->
   <link href='css/clock.css' rel='stylesheet' type='text/css'>
-  <link href='css/index.css' rel='stylesheet' type='text/css'>
+  <!-- <link href='css/index.css' rel='stylesheet' type='text/css'> -->
+  <style>
+    .section {
+      text-align: center;
+    }
+
+    #water .layer {
+      position: absolute;
+      z-index: 5;
+      width: 100%;
+      left: 0;
+      top: 43%;
+      height: 100%;
+    }
+
+    #water h1 {
+      color: #fff;
+    }
+
+    #infoMenu li a {
+      color: #fff;
+    }
+  </style>
 </head>
 
 <body>
@@ -41,94 +65,92 @@
           </div>
         </div>
       </div>
-      <nav id="nav">
-        <ul>
-          <li>
-            <a onclick="scrollSlide(this,'#slide1');" class="active" title="Next Section">Slide 1</a>
-          </li>
-          <li>
-            <a onclick="scrollSlide(this,'#slide2');" title="Next Section">Slide 2</a>
-          </li>
-          <li>
-            <a onclick="scrollSlide(this,'#slide3');" title="Next Section">Slide 3</a>
-          </li>
-          <li>
-            <a onclick="scrollSlide(this,'#slide4');" title="Next Section">Slide 4</a>
-          </li>
-          <li>
-            <a onclick="scrollSlide(this,'#slide5');" title="Next Section">Slide 5</a>
-          </li>
-        </ul>
-      </nav>
+      <ul id="menu">
+        <li data-menuanchor="water" class="active">
+          <a id="#water" class="active">Slide 1</a>
+        </li>
+        <li data-menuanchor="grass">
+          <a id="#grass">Slide 2</a>
+        </li>
+        <li data-menuanchor="clock">
+          <a id="#clock">Slide 3</a>
+        </li>
+        <li data-menuanchor="tree">
+          <a id="#tree">Slide 4</a>
+        </li>
+      </ul>
+
     </div>
   </header>
 
   <!-- SLIDES START -->
-  <div id="water" class="big-picture">
-    <div id="floating-menu" class="shadow-it">
-      <div class="clockprojecticon floating-menu-item box">
-        <p>clock icon</p>
-      </div>
-      <div class="blurprojecticon floating-menu-item box">
-        <p>blur icon</p>
-        <div id="blur" class="popup-content">
-          <p>put blur stuff here</p>
+  <div id="pagepiling">
+    <div id="water" class="section big-picture">
+      <div id="floating-menu" class="shadow-it">
+        <div class="clockprojecticon floating-menu-item box">
+          <p>clock icon</p>
         </div>
-      </div>
-      <div class="anotherprojecticon floating-menu-item box">
-        <p>another icon</p>
-        <div id="another" class="popup-content">
-          <p>put another stuff here</p>
+        <div class="blurprojecticon floating-menu-item box">
+          <p>blur icon</p>
+          <div id="blur" class="popup-content">
+            <p>put blur stuff here</p>
+          </div>
+        </div>
+        <div class="anotherprojecticon floating-menu-item box">
+          <p>another icon</p>
+          <div id="another" class="popup-content">
+            <p>put another stuff here</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="diamond-group rellax" data-rellax-speed="10">
-    <div class="diamond-narrow pos1"></div>
-    <div class="diamond-narrow pos2"></div>
-    <div class="diamond-narrow pos3"></div>
-    <div class="diamond-narrow pos4"></div>
-  </div>
+    <div class="diamond-group">
+      <div class="diamond-narrow pos1"></div>
+      <div class="diamond-narrow pos2"></div>
+      <div class="diamond-narrow pos3"></div>
+      <div class="diamond-narrow pos4"></div>
+    </div>
 
-  <div id="grass" class="big-picture rellax" data-rellax-speed="1"></div>
+    <div id="grass" class="section big-picture"></div>
 
-  <div class="diamond-group rellax" data-rellax-speed="10">
-    <div class="diamond-narrow pos1"></div>
-    <div class="diamond-narrow pos2"></div>
-    <div class="diamond-narrow pos3"></div>
-    <div class="diamond-narrow pos4"></div>
-  </div>
+    <div class="diamond-group">
+      <div class="diamond-narrow pos1"></div>
+      <div class="diamond-narrow pos2"></div>
+      <div class="diamond-narrow pos3"></div>
+      <div class="diamond-narrow pos4"></div>
+    </div>
 
-  <div id="slide4" class="rellax" data-rellax-speed="-15">
-  </div>
-  <div class="sample1 rellax" data-rellax-speed="-10">in slide 4</div>
-  <div class="content rellax" data-rellax-speed="0">
-    <div class="sample2">in slide 4 content div</div>
-  </div>
+    <div id="slide4">
+    </div>
+    <div class="sample1">in slide 4</div>
+    <div class="content">
+      <div class="sample2">in slide 4 content div</div>
+    </div>
 
-  <div id="clock" class="rellax shadow-it" data-rellax-speed="4">
-    <div class="clock">
-      <div class="clock-face">
-        <div class="hand hour-hand"></div>
-        <div class="hand min-hand"></div>
-        <div class="hand second-hand"></div>
+    <div id="clock" class="section shadow-it">
+      <div class="clock">
+        <div class="clock-face">
+          <div class="hand hour-hand"></div>
+          <div class="hand min-hand"></div>
+          <div class="hand second-hand"></div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="tree" class="big-picture rellax" data-rellax-speed="1"></div>
+    <div id="tree" class="section big-picture"></div>
 
-  <div class="diamond-group rellax" data-rellax-speed="10">
-    <div class="diamond-narrow pos1"></div>
-    <div class="diamond-narrow pos2"></div>
-    <div class="diamond-narrow pos3"></div>
-    <div class="diamond-narrow pos4"></div>
+    <div class="diamond-group">
+      <div class="diamond-narrow pos1"></div>
+      <div class="diamond-narrow pos2"></div>
+      <div class="diamond-narrow pos3"></div>
+      <div class="diamond-narrow pos4"></div>
+    </div>
   </div>
 
   <!-- SLIDES END -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdn.rawgit.com/dixonandmoe/rellax/master/rellax.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery.pagepiling.js"></script>
   <script src="js/index.js"></script>
   <script src="js/clock.js"></script>
 </body>
