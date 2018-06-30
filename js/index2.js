@@ -87,13 +87,4 @@ $(document).ready(function () {
 
   doSteps();
 })();
-  var wait = 100;
 
-  for(var r = 180; r>=0; r=r-10) {
-    rotateSteps.push({rotate: r, thenWait: wait});
-    wait += 15;
-  }
-
-  doSteps();
-
-}();
