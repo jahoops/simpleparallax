@@ -10,14 +10,16 @@
   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
+  <link href='css/index.css' rel='stylesheet' type='text/css'>
   <link href='css/jquery.pagepiling.css' rel='stylesheet' type='text/css'>
   <link href='css/examples.css' rel='stylesheet' type='text/css'>
   <!-- <link href='css/nav.css' rel='stylesheet' type='text/css'> -->
   <link href='css/clock.css' rel='stylesheet' type='text/css'>
-  <!-- <link href='css/index.css' rel='stylesheet' type='text/css'> -->
+
   <style>
     .section {
       text-align: center;
+      background-size: cover;
     }
 
     #water .layer {
@@ -45,38 +47,19 @@
   <header id="header">
     <div class="content">
       <div id="logo">
-        <div id="screen">
-          <div id="live">
-            <span id="k">K</span>
-            <span id="a">A</span>
-            <span id="l">L</span>
-            <span id="l2">L</span>
-            <span id="i">I</span>
-            <span id="h">H</span>
-            <span id="o">O</span>
-            <span id="o2">O</span>
-            <span id="p">P</span>
-            <span id="e">E</span>
-            <span id="r">R</span>
-            <span id="dot">.</span>
-            <span id="c">C</span>
-            <span id="o3">O</span>
-            <span id="m">M</span>
-          </div>
-        </div>
       </div>
       <ul id="menu">
         <li data-menuanchor="water" class="active">
-          <a id="#water" class="active">Slide 1</a>
+          <a href="#water" class="active">Home</a>
         </li>
         <li data-menuanchor="grass">
-          <a id="#grass">Slide 2</a>
+          <a href="#grass">Life</a>
         </li>
         <li data-menuanchor="clock">
-          <a id="#clock">Slide 3</a>
+          <a href="#clock">Projects</a>
         </li>
         <li data-menuanchor="tree">
-          <a id="#tree">Slide 4</a>
+          <a href="#tree">Contact</a>
         </li>
       </ul>
 
@@ -105,30 +88,28 @@
       </div>
     </div>
 
-    <div class="diamond-group">
-      <div class="diamond-narrow pos1"></div>
-      <div class="diamond-narrow pos2"></div>
-      <div class="diamond-narrow pos3"></div>
-      <div class="diamond-narrow pos4"></div>
-    </div>
-
-    <div id="grass" class="section big-picture"></div>
-
-    <div class="diamond-group">
-      <div class="diamond-narrow pos1"></div>
-      <div class="diamond-narrow pos2"></div>
-      <div class="diamond-narrow pos3"></div>
-      <div class="diamond-narrow pos4"></div>
-    </div>
-
-    <div id="slide4">
-    </div>
-    <div class="sample1">in slide 4</div>
-    <div class="content">
-      <div class="sample2">in slide 4 content div</div>
+    <div id="grass" class="section big-picture">
+      <div class="diamond-group">
+        <div class="diamond-narrow pos1"></div>
+        <div class="diamond-narrow pos2"></div>
+        <div class="diamond-narrow pos3"></div>
+        <div class="diamond-narrow pos4"></div>
+      </div>
+      <div class="diamond-group">
+        <div class="diamond-narrow pos1"></div>
+        <div class="diamond-narrow pos2"></div>
+        <div class="diamond-narrow pos3"></div>
+        <div class="diamond-narrow pos4"></div>
+      </div>
     </div>
 
     <div id="clock" class="section shadow-it">
+      <div class="diamond-group">
+        <div class="diamond-narrow pos1"></div>
+        <div class="diamond-narrow pos2"></div>
+        <div class="diamond-narrow pos3"></div>
+        <div class="diamond-narrow pos4"></div>
+      </div>
       <div class="clock">
         <div class="clock-face">
           <div class="hand hour-hand"></div>
@@ -136,20 +117,24 @@
           <div class="hand second-hand"></div>
         </div>
       </div>
+      <div class="diamond-group">
+        <div class="diamond-narrow pos1"></div>
+        <div class="diamond-narrow pos2"></div>
+        <div class="diamond-narrow pos3"></div>
+        <div class="diamond-narrow pos4"></div>
+      </div>
     </div>
 
-    <div id="tree" class="section big-picture"></div>
-
-    <div class="diamond-group">
-      <div class="diamond-narrow pos1"></div>
-      <div class="diamond-narrow pos2"></div>
-      <div class="diamond-narrow pos3"></div>
-      <div class="diamond-narrow pos4"></div>
+    <div id="tree" class="section big-picture">
     </div>
   </div>
 
+
   <!-- SLIDES END -->
   <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.5.1/velocity.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.5.1/velocity.ui.min.js"></script>
+  <script src="js/jquery.blast.js"></script>
   <script src="js/jquery.pagepiling.js"></script>
   <script src="js/index.js"></script>
   <script src="js/clock.js"></script>

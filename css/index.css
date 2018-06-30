@@ -12,18 +12,6 @@ html {
   font-family: 'Goudy+Bookletter+1911';
 }
 
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-.content {
-  margin: 0 auto;
-  width: 960px;
-}
-
 #water {
   background: url(../img/water.png) 50% 0 no-repeat fixed / cover;
 }
@@ -138,29 +126,6 @@ body {
   background: yellow;
 }
 
-.diamond-group {
-  position: absolute;
-  right: 50px;
-}
-.diamond-narrow {
-	width: 0;
-	height: 0;
-	border: 50px solid transparent;
-	border-bottom: 70px solid red;
-	position: relative;
-  top: -50px;
-  opacity: 0.5;
-}
-.diamond-narrow:after {
-	content: '';
-	position: absolute;
-	left: -50px; top: 70px;
-	width: 0;
-	height: 0;
-	border: 50px solid transparent;
-	border-top: 70px solid red;
-}
-
 html {
 	touch-action: none;
 	content-zooming: none;
@@ -169,15 +134,11 @@ html {
 }
 #logo {
   position: absolute;
-  left: 50%;
-  top: 50vh;
+  right: 2%;
+  top: 2%;
   z-index:999999;
   transition: all 2.0s;
   transition-delay: 0.2s;
-}
-#logo.set {
-  left: 50px;
-  top: 50px;
 }
 #screen {
 	position:absolute;
