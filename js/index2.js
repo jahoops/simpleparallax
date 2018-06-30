@@ -73,7 +73,6 @@ $(document).ready(function () {
     return null;
   }
 
-<<<<<<< HEAD
   var wait = 10;
 
   for (var r = 180; r >= -40; r = r - 10) {
@@ -88,7 +87,6 @@ $(document).ready(function () {
 
   doSteps();
 })();
-=======
   var wait = 100;
 
   for(var r = 180; r>=0; r=r-10) {
@@ -99,4 +97,3 @@ $(document).ready(function () {
   doSteps();
 
 }();
->>>>>>> 0b5dcb02798640c490fb79144efa38eaa245f9cc
